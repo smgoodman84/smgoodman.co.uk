@@ -1,0 +1,7 @@
+﻿@model smgoodman.co.uk.Models.Photography.PhotoList
+<div class="ph-photolist">
+    @foreach (var photo in Model.Photos)
+    {
+        Html.RenderPartial("_Photo", photo);
+    }
+</div>

@@ -1,0 +1,60 @@
+﻿@import "vars.scss";
+/* cv.scss */
+
+/* sections */
+.cv-section {
+    margin-top: 2.5em;
+    border-top: solid 1px $secondary-color;
+}
+
+/* jobs */
+.cv-jobtitle, .cv-employer, .cv-education-institution {
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+
+.cv-jobtitle {
+    font-weight: bold;
+}
+
+/* skills & hobbies */
+.cv-skills, .cv-hobbies {
+    text-align: center;
+    padding: 0;
+}
+
+.cv-skill, .cv-hobby {
+    display: inline;
+    background: $secondary-color;
+    border: solid 1px $primary-color;
+    padding: 5px 10px 6px 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    line-height: 3em;
+}
+
+/* education */
+.cv-education {
+    overflow: auto;
+    margin: 0 auto;
+}
+.cv-education ul {
+    list-style-position: inside;
+    padding-left: inherit;
+    margin-left: inherit;
+}
+
+@media all and (min-width: 620px) {
+    .cv-education-left {
+        float: left;
+        width: 48%;
+    }
+    .cv-education-right {
+        float: right;
+        width: 48%;
+    }
+}
+
+

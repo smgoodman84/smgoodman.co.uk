@@ -1,0 +1,49 @@
+﻿@using smgoodman.co.uk.Models.Photography;
+@{
+    ViewBag.Title = "Photography";
+
+    var photoData = Photography.Album
+        .AlbumPhotos()
+        .Select(x => "          " + x.Photo.AsJavaScriptObject());
+
+    var photoDataArray = String.Join("," + Environment.NewLine, photoData);
+}
+
+<div id="modal" class="modalDialog">
+        <a id="gallery-previous" href="#" title="Previous">
+            <div class="slideBumper slideBumper-left"></div>
+        </a>
+        <a id="modal-close" href="#" title="Close">
+            <div class="slideBumper slideBumper-close"></div>
+        </a>
+        <a id="gallery-next" href="#" title="Next">
+            <div class="slideBumper slideBumper-right"></div>
+        </a>
+    <div id="modal-container">
+        <img id="gallery-photo" />
+    </div>
+</div>
+
+<h2>Photography</h2>
+<div id="ph-onecol" class="ph-photolist-container">
+    @foreach (var photoList in Photography.Album.AsColumns(1))
+    {
+        Html.RenderPartial("_PhotoList", photoList);
+    }
+</div>
+<div id="ph-twocol" class="ph-photolist-container">
+    @foreach (var photoList in Photography.Album.AsColumns(2))
+    {
+        Html.RenderPartial("_PhotoList", photoList);
+    }
+</div>
+
+<script type="text/javascript">
+    var Photos = [
+        @Html.Raw(photoDataArray)
+    ];
+</script>
+<script type="text/javascript" src="~/Content/js/util.js"></script>
+<script type="text/javascript" src="~/Content/js/modal.js"></script>
+<script type="text/javascript" src="~/Content/js/gallery.js"></script>
+<script type="text/javascript" src="~/Content/js/photography.js"></script>

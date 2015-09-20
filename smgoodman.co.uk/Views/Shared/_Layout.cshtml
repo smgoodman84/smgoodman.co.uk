@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Goodman - @ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="/Content/style/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar card">
+            <div class="headshot">
+                <img src="/Content/images/profile120.jpg" class="headshot-img" />
+            </div>
+            <div class="name">
+                <p>Simon Goodman</p>
+            </div>
+            <div class="nav">
+                <a href='@Url.Action("Index", "CV")'><img src="~/Content/images/ico_cv.png" title="Curriculum Vitae" class="nav-icon" /></a>
+                <a href='@Url.Action("Index", "SqlSimon")'><img src="~/Content/images/ico_twitter.png" title="Twitter: SQL_Simon" class="nav-icon" /></a>
+                <a href="mailto:simon.goodman84@googlemail.com"><img src="/Content/images/ico_email.png" title="Mail Me: simon.goodman84@googlemail.com" class="nav-icon" /></a>
+                <a href='@Url.Action("Index", "Photography")'><img src="~/Content/images/ico_camera.png" title="Photography" class="nav-icon" /></a>
+                <a href="https://uk.linkedin.com/pub/simon-goodman/46/6b6/523/en"><img src="~/Content/images/ico_linkedin.png" title="Connect on LinkedIn" class="nav-icon" /></a>
+                <a href="tel:+447547797688"><img src="~/Content/images/ico_phone.png" title="Call Me: +447809195414" class="nav-icon" /></a>
+            </div>
+        </aside>
+        <div class="content cv card">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

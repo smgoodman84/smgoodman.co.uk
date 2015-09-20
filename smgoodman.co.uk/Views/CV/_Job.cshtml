@@ -1,0 +1,12 @@
+﻿@model smgoodman.co.uk.Models.CV.Job
+@{
+    var formattedEndDate = Model.EndDate.HasValue ? string.Format("{0:MMM yyyy}", Model.EndDate) : "Present";
+}
+<div class="cv-job cv-section">
+    <p><span class="cv-jobtitle">@Model.Title</span> - <span class="cv-employer">@Model.Employer</span></p>
+    <p class="cv-jobdate">
+        @string.Format("{0:MMM yyyy}",Model.StartDate) - @formattedEndDate
+    </p>
+    <p><a href="http://@Model.WebsiteUrl">@Model.WebsiteUrl</a></p>
+    <p>@Html.Raw(Model.Description.Trim().Replace(Environment.NewLine, "</p><p>"))</p>
+</div>

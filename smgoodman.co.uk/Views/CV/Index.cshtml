@@ -1,0 +1,54 @@
+﻿@using smgoodman.co.uk.Models.CV;
+@{
+    ViewBag.Title = "Home Page";
+}
+<div>
+    <h2>Curriculum Vitae</h2>
+    <p>@Html.Raw(CV.PersonalStatement.Trim().Replace(Environment.NewLine, "</p><p>"))</p>
+</div>
+
+<div class="cv-section cv-skills">
+    <h2>Languages and Methodologies</h2>
+    @foreach (var skill in CV.Skills)
+    {
+        <span class="cv-skill">@Html.Raw(skill.name.Replace(" ", "&nbsp;"))</span>
+    }
+</div>
+
+@foreach (var job in CV.Jobs)
+{
+    Html.RenderPartial("_Job", job);
+}
+
+<div class="cv-section cv-education">
+    <h2>Education</h2>
+    <div class="cv-education-left">
+        <p class="cv-education-institution">University of Southampton</p>
+        <ul>
+            <li>BSC Computer Science (2.1)</li>
+            <li>Dissertation: <a href="~/Content/dissertation.pdf">X-ray Image Mosaics</a></li>
+        </ul>
+    </div>
+    <div class="cv-education-right">
+        <p class="cv-education-institution">Chaucer Technology School</p>
+        <ul>
+            <li>A-Level Computing (A)</li>
+            <li>A-Level Mathematics (A)</li>
+            <li>A-Level Physics (A)</li>
+        </ul>
+    </div>
+</div>
+
+<div class="cv-section cv-hobbies">
+    <h2>Hobbies</h2>
+    @foreach (var hobby in CV.Hobbies)
+    {
+        <span class="cv-hobby">@Html.Raw(hobby.name.Replace(" ","&nbsp;"))</span>
+    }
+</div>
+
+<div class="cv-section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:simon.goodman84@googlemail.com">simon.goodman84@googlemail.com</a></p>
+    <p>Phone: <a href="tel:+447547797688">07547 797688</a></p>
+</div>
