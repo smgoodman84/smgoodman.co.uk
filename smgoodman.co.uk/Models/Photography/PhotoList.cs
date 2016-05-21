@@ -1,33 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace smgoodman.co.uk.Models.Photography
 {
     public class PhotoList
     {
-        private List<PhotoList> _photoLists { get; set; }
-        private List<AlbumPhoto> _photos { get; set; }
+        public List<AlbumPhoto> Photos { get; }
 
         public PhotoList(List<AlbumPhoto> photos)
         {
-            _photos = photos;
+            Photos = photos;
         }
-
-        public List<AlbumPhoto> Photos { get { return _photos; } }
-
-
-
 
         private class MeasuredPhotoList
         {
-            private int _margin = 0;
-            private int _height = 0;
-            private List<AlbumPhoto> _photos = new List<AlbumPhoto>();
+            private readonly int _margin;
+            private readonly List<AlbumPhoto> _photos = new List<AlbumPhoto>();
 
-            public int Height { get { return _height; } }
-            public List<AlbumPhoto> Photos { get { return _photos.ToList(); } }
+            public int Height { get; private set; }
 
             public MeasuredPhotoList(int margin)
             {
@@ -36,7 +26,7 @@ namespace smgoodman.co.uk.Models.Photography
 
             public void Add(AlbumPhoto photo)
             {
-                _height += (int)photo.Photo.Height + _margin;
+                Height += photo.Photo.Height + _margin;
                 _photos.Add(photo);
             }
 
@@ -49,7 +39,7 @@ namespace smgoodman.co.uk.Models.Photography
         public static List<PhotoList> SortIntoColumns(List<AlbumPhoto> photos, int columns = 2)
         {
             var measuredPhotoLists = new List<MeasuredPhotoList>();
-            for (int i = 0; i < columns; i++)
+            for (var i = 0; i < columns; i++)
             {
                 measuredPhotoLists.Add(new MeasuredPhotoList(30));
             }

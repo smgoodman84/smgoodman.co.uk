@@ -11,7 +11,7 @@
     <h2>Languages and Methodologies</h2>
     @foreach (var skill in CV.Skills)
     {
-        <span class="cv-skill">@Html.Raw(skill.name.Replace(" ", "&nbsp;"))</span>
+        <span class="cv-skill">@Html.Raw(skill.Name.Replace(" ", "&nbsp;"))</span>
     }
 </div>
 
@@ -43,7 +43,7 @@
     <h2>Hobbies</h2>
     @foreach (var hobby in CV.Hobbies)
     {
-        <span class="cv-hobby">@Html.Raw(hobby.name.Replace(" ","&nbsp;"))</span>
+        <span class="cv-hobby">@Html.Raw(hobby.Name.Replace(" ","&nbsp;"))</span>
     }
 </div>
 

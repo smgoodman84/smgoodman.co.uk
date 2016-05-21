@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace smgoodman.co.uk.Models.Photography
 {
     public class PhotoAlbum
     {
-        private List<Photo> _photos;
-        public PhotoAlbum(List<Photo> photos)
+        public PhotoAlbum(IEnumerable<Photo> photos)
         {
-            _photos = photos.ToList();
+            Photos = photos.ToList();
         }
 
-        public List<Photo> Photos { get { return _photos.ToList(); } }
+        public List<Photo> Photos { get; }
 
         public List<PhotoList> AsColumns(int columns)
         {
@@ -24,7 +21,7 @@ namespace smgoodman.co.uk.Models.Photography
         public List<AlbumPhoto> AlbumPhotos()
         {
             var result = new List<AlbumPhoto>();
-            var head = AlbumPhoto(_photos, null);
+            var head = AlbumPhoto(Photos, null);
 
             var curr = head;
             while (true)
@@ -41,7 +38,7 @@ namespace smgoodman.co.uk.Models.Photography
             return result;
         }
 
-        private AlbumPhoto AlbumPhoto(List<Photo> photos, AlbumPhoto previous)
+        private static AlbumPhoto AlbumPhoto(IReadOnlyCollection<Photo> photos, AlbumPhoto previous)
         {
             if (photos.Count == 0)
             {
