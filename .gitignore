@@ -46,3 +46,6 @@ Temporary Items
 packages
 bin
 obj
+.suo
+smgoodman.pubxml.user
+.vs
