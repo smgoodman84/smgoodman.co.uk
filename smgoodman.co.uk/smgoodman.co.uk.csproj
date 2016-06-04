@@ -179,6 +179,7 @@
     <Content Include="Content\images\gall_close.png" />
     <Content Include="Content\images\gall_next.png" />
     <Content Include="Content\images\gall_previous.png" />
+    <Content Include="Content\images\ico_github.png" />
     <Content Include="Content\images\portfolio\0001.jpg" />
     <Content Include="Content\images\portfolio\0002.jpg" />
     <Content Include="Content\images\portfolio\0003.jpg" />
@@ -239,7 +240,6 @@
     <Content Include="Content\images\ico_cv.png" />
     <Content Include="Content\images\ico_email.png" />
     <Content Include="Content\images\ico_linkedin.png" />
-    <Content Include="Content\images\ico_phone.png" />
     <Content Include="Content\images\ico_twitter.png" />
     <Content Include="Content\images\profile120.jpg" />
     <Content Include="Content\style\layout.css">
