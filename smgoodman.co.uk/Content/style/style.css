@@ -208,12 +208,22 @@ body {
   border-top: solid 1px #f5f5f5; }
 
 /* jobs */
-.cv-jobtitle, .cv-employer, .cv-education-institution {
+.cv-employer, .cv-education-institution {
   font-size: 1.4em;
   line-height: 1.4em; }
 
-.cv-jobtitle {
+.cv-employer, .cv-jobtitle {
   font-weight: bold; }
+
+.cv-employer {
+  float: right; }
+
+.cv-employer a {
+  color: #292f33;
+  text-decoration: none; }
+
+.cv-employer a:hover {
+  text-decoration: underline; }
 
 /* skills & hobbies */
 .cv-skills, .cv-hobbies {
