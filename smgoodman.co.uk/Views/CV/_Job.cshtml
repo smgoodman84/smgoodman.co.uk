@@ -3,10 +3,14 @@
     var formattedEndDate = Model.EndDate.HasValue ? string.Format("{0:MMM yyyy}", Model.EndDate) : "Present";
 }
 <div class="cv-job cv-section">
-    <p class="cv-employer"><a href="http://@Model.WebsiteUrl">@Model.Employer</a></p>
-    <p class="cv-jobdate">
-        <span class="cv-jobtitle">@Model.Title</span><br/>
-        @string.Format("{0:MMM yyyy}", Model.StartDate) - @formattedEndDate
-    </p>
+    <div class="clearfix">
+        <p class="cv-employer">
+            <a href="http://@Model.WebsiteUrl">@Model.Employer</a>
+        </p>
+        <p class="cv-jobdate">
+            <span class="cv-jobtitle">@Model.Title</span><br />
+            @string.Format("{0:MMM yyyy}", Model.StartDate) - @formattedEndDate
+        </p>
+    </div>
     <p>@Html.Raw(Model.Description.Trim().Replace(Environment.NewLine, "</p><p>"))</p>
 </div>
