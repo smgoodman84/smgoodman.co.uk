@@ -159,7 +159,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CVController.cs" />
     <Compile Include="Controllers\PhotographyController.cs" />
-    <Compile Include="Controllers\SqlSimonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -319,7 +318,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\SqlSimon\Index.cshtml" />
     <Content Include="Views\CV\Index.cshtml" />
     <Content Include="Views\CV\_Job.cshtml" />
     <Content Include="Views\Photography\_Photo.cshtml" />
