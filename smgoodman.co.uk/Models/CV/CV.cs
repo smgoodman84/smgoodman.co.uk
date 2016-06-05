@@ -5,59 +5,71 @@ namespace smgoodman.co.uk.Models.CV
 {
     public static class CV
     {
-        public static string PersonalStatement = @"I am a self motivated software developer with an unflagging energy to do things better.
+        public static string PersonalStatement = @"I love working with others to build great software.
 
-I am passionate about delivering software with a real business benefit. I aim to understand what the business needs and focus on creating the best solution to the problem, never forgetting to consider non-technical options. I am always mindful of the direction of the business and am keen to be involved in helping the business achieve it’s goals.
+I take pride in being able to design and build software that solves real world problems. I enjoy learning about a need that someone has, and then working with them to understand how a software system might help them. When building software, I like to deliver value quickly and then iterate; adding, removing and modifying features until the best solution is delivered. I love the challenge of balancing all sorts of requirement, from functional and user experience requirements, to performance, security and quality requirements; always keeping costs and timescales in mind.
 
-When it comes to software development I like to keep things simple. I always consider the system’s architecture and aim to make it more elegant, robust and understandable. I find the SOLID principles to be vital in achieving this.
+I believe that effective teamwork and communication are vital when it comes to delivering software. As a result, I have made them a focus throughout my career. Getting everyone pulling in the same direction can be challenging, but is well worth the effort in order to be able to deliver the best solution.
 
-When working on existing code, I follow the boy scout principle and leave the code better than when I came to it. I find automated testing to be invaluable and get a sense of satisfaction from producing reliable code.
+Co-founding an IT Support and Software Development company when I first left university gave me first hand experience of the challenges of running a business. It also gave me an appreciation of all parts of a business, from marketing, design and ux to analytics, analysis and business development. This stops me from focusing solely on technical problems and allows me to focus on wider business needs instead.
 
-In a crisis I remain calm under pressure and methodically work through the problem at hand. I avoid knee-jerk reactions and get the system working again, then attempt to understand the root cause of the issue.";
+I enjoy keeping up to date with new approaches to solving problems, I primarily do this by reading plenty of books and blogs. I put these ideas into practice by working on toy projects and code katas at home and when appropriate bringing new ideas to the workplace.";
 
         public static List<Skill> Skills = new List<Skill>
         {
             new Skill("C#"),
             new Skill("SQL"),
-            new Skill("MVC"),
-            new Skill("PHP"),
-            new Skill("Java"),
-            new Skill("C"),
+            new Skill("JavaScript"),
             new Skill("HTML"),
             new Skill("CSS"),
-            new Skill("JavaScript"),
             new Skill("SOLID Principles"),
             new Skill("Test Driven Development"),
-            new Skill("SOA/Microservices"),
-            new Skill("RabbitMQ"),
+            new Skill("Agile"),
             new Skill("Continuous Integration"),
+            new Skill("DevOps"),
+            new Skill("Micorservices"),
+            new Skill("Event Sourcing"),
+            new Skill("MVC"),
         };
 
         public static List<Hobby> Hobbies = new List<Hobby>
         {
             new Hobby("Photography"),
-            new Hobby("Table Tennis"),
             new Hobby("Reading"),
-            new Hobby("Running"),
             new Hobby("Travel"),
+            new Hobby("Foosball"),
+            new Hobby("Table Tennis"),
+            new Hobby("Running"),
             new Hobby("Rock Climbing"),
         };
 
         public static List<Job> Jobs = new List<Job>
         {
             new Job(
+                "Software Developer",
+                "Redgate Software",
+                new DateTime(2015,05,1),
+                null,
+                "www.red-gate.com",
+                @"When I first began at Redgate I had the chance to work closely with Oracle, something that has given me a broader perspective on database technologies. I have also gained a greater appreciation of the role that UX and design play in software when I was part of a team who were updating a UI as part of a UI consistency project.
+
+At Redgate I have had the chance to experience some of the many ways in which technical knowledge can be shared, including pair programming, discussion groups, lightning talks and blog posts. I also had the opportunity to coach a test engineer in software development, something I particularly enjoyed."
+                ),
+            new Job(
                 "Senior Software Developer",
                 "Amigo Loans",
                 new DateTime(2012,10,1),
-                null,
+                new DateTime(2015,05,1),
                 "www.amigoloans.co.uk",
-                @"My experience at Amigo has helped me appreciate the difference between a well architected system and a poorly architected system. This has mainly been a result of an ongoing project to rebuild a monolithic system using an SOA/Microservices approach. The SOLID principles, design patterns and continuous integration have been a big part of the rebuild effort.
+                @"During my time at Amigo, the business was constantly changing and adapting to market conditions. This meant we were constantly updating and improving the business systems. 
 
-A large part of my time has been spent developing “The People System”; a system designed to store basic personal details of Amigo customers. The aim of the system is for it to recognise when a customer has made more than one application and to link the applications together. I developed logic to identify duplicate applications and then created an implementation that matched new applications to existing applications in under a second.
+We systematically worked our way through every part of the business, refining the business process and supporting software so the business could function more efficiently. We used a microservices approach, breaking down the business functionality into a large number of services, each with clear and well defined responsibilities. I particularly enjoyed architectural discussions around how different services should interact and the implications of different approaches.
 
-I am the engineering expert for all systems involved in communicating with Amigo’s business partners’. This involves working with engineers from other companies to make sure that our systems integrate seamlessly, allowing partners to introduce customers to Amigo and allowing them to read reporting data from our systems. As 40% of Amigo’s customers are referred by a partner, these systems are a vital part of the business.
+I was responsible for supporting the external APIs made available to business partners that integrated with our systems. This required me to be able to effectively communicate with people from outside the business about technical details and how it related to business objectives.
 
-I have also developed a number of small applications that provide more effective management and monitoring of the main systems as part of an effort to make the system more reliable. In an attempt to share the engineering teams’ knowledge and improve communication I organised a weekend away where we discussed the high level architecture and direction of our systems."
+I spent a lot of time working on the People system, this system required me to build a database that allowed all new loan applications to be fuzzy matched instantly to tens of millions of existing customer records.
+
+I would help other developers troubleshoot performance problems, particularly optimising database queries and tuning database workloads; work that I found very satisfying."
                 ),
             new Job(
                 "Lead Developer",
@@ -65,11 +77,13 @@ I have also developed a number of small applications that provide more effective
                 new DateTime(2010,1,1),
                 new DateTime(2012,10,1),
                 "www.rationetwork.co.uk",
-                @"When I joined the company I worked in the Loanfinder division (a loan comparison website). I quickly earned the nickname ""SQL Simon"" from my colleagues when they recognised my passion for SQL and databases. My main focus was on improving the back end systems that supported the companies’ website. This included developing a new payment system that supports direct debit and credit card payments.
+                @"As the lead developer at Ratio I was responsible for ensuring that the development standards met the needs of the business. This included making sure that all software had an appropriate architecture, as well as ensuring that code and quality standards were met. 
 
-After my first year, I was chosen to work on the division’s flagship project to whitelabel the Loanfinder website. This system made Loanfinder’s loan recommendation system available to anyone wishing to use it. The business evolved to make this system it’s core product and I spent a large amount of time building new features and adding new products to it that ultimately enabled Ratio to become it’s own business.
+I was also responsible for ensuring that all our websites and systems never had significant periods of downtime. I would discuss software designs with developers to ensure that the requirements had been met and that the software would be simple to maintain. I would perform code reviews for developers and pair program with them when they were new to a codebase.
 
-As lead developer it was my responsibility to make sure our systems stayed up 24/7. To help achieve this I designed and built two systems - Loudspeaker and Chirp; systems that provided error monitoring and system monitoring (in the style of twitter) respectively. The business valued a fast development process and these systems allowed us to react quickly when that had compromised the stability of the system."
+I was the main technical point of contact for our external APIs and would often discuss what was possible technically when it comes to integrating with business partners. I also discussed how these integrations should be implemented with members of their technical team.
+
+As a side project, I developed a number of systems that provide monitoring and alerting in order to improve performance and uptime metrics. This included an alerting wallboard that would display errors from every software system across the business. It would also send email or sms alerts if the error was severe enough. I also created a news feed style interface for the system. It provided visibility of important operations being performed by the system allowing us to see when something was not quite right. I also developed a number of reporting interfaces for displaying tables, charts and graphs of important business and technical metrics. These systems allowed us to react quickly when there was a problem so it could be resolved sooner."
                 ),
             new Job(
                 "Senior Software & IT Support Consultant",
