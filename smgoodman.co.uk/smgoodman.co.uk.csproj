@@ -202,6 +202,7 @@
     <Content Include="Content\images\portfolio\0021.jpg" />
     <Content Include="Content\images\portfolio\0022.jpg" />
     <Content Include="Content\images\portfolio\0023.jpg" />
+    <Content Include="Content\images\portfolio\0024.jpg" />
     <Content Include="Content\images\portfolio\thumbs\0001.jpg" />
     <Content Include="Content\images\portfolio\thumbs\0002.jpg" />
     <Content Include="Content\images\portfolio\thumbs\0003.jpg" />
@@ -225,6 +226,7 @@
     <Content Include="Content\images\portfolio\thumbs\0021.jpg" />
     <Content Include="Content\images\portfolio\thumbs\0022.jpg" />
     <Content Include="Content\images\portfolio\thumbs\0023.jpg" />
+    <Content Include="Content\images\portfolio\thumbs\0024.jpg" />
     <Content Include="Content\js\gallery.js" />
     <Content Include="Content\js\modal.js" />
     <Content Include="Content\js\photography.js" />
