@@ -11,7 +11,7 @@ I take pride in being able to design and build software that solves real world p
 
 I believe that effective teamwork and communication are vital when it comes to delivering software. As a result, I have made them a focus throughout my career. Getting everyone pulling in the same direction can be challenging, but is well worth the effort in order to be able to deliver the best solution.
 
-Co-founding an IT Support and Software Development company when I first left university gave me first hand experience of the challenges of running a business. It also gave me an appreciation of all parts of a business, from marketing, design and ux to analytics, analysis and business development. This stops me from focusing solely on technical problems and allows me to focus on wider business needs instead.
+Co-founding an IT Support and Software Development company when I first left university gave me first hand experience of the challenges of running a business. It also gave me an appreciation of all parts of a business, from marketing, design and UX to analytics, analysis and business development. This stops me from focusing solely on technical problems and allows me to focus on wider business needs instead.
 
 I enjoy keeping up to date with new approaches to solving problems, I primarily do this by reading plenty of books and blogs. I put these ideas into practice by working on toy projects and code katas at home and when appropriate bringing new ideas to the workplace.";
 
